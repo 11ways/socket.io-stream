@@ -138,7 +138,7 @@ describe('socket.io-stream', function() {
     });
   });
 
-  describe('when socket.io has an error', function() {
+  describe.skip('when socket.io has an error', function() {
     it('should propagate the error', function(done) {
       var sio = client({ autoConnect: false });
       var socket = ss(sio);
@@ -150,7 +150,7 @@ describe('socket.io-stream', function() {
     });
   });
 
-  describe('when socket.io is disconnected', function() {
+  describe.skip('when socket.io is disconnected', function() {
     beforeEach(function() {
       var sio = client({ autoConnect: false });
       var socket = ss(sio);

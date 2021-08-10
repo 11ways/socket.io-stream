@@ -1,13 +1,12 @@
 # Socket.IO stream
 
-[![Build Status](https://travis-ci.org/nkzawa/socket.io-stream.png?branch=master)](https://travis-ci.org/nkzawa/socket.io-stream)
-[![NPM version](https://badge.fury.io/js/socket.io-stream.png)](http://badge.fury.io/js/socket.io-stream)
-
 This is the module for bidirectional binary data transfer with Stream API through [Socket.IO](https://github.com/socketio/socket.io).
+
+This is a fork of nkzawa/socket.io-stream, mainly just to upgrade the aging dependencies. WIP.
 
 ## Installation
 
-    npm install socket.io-stream
+    npm install @11ways/socket.io-stream
 
 ## Usage
 
@@ -21,7 +20,7 @@ Server:
 
 ```js
 var io = require('socket.io').listen(80);
-var ss = require('socket.io-stream');
+var ss = require('@11ways/socket.io-stream');
 var path = require('path');
 
 io.of('/user').on('connection', function(socket) {
@@ -38,7 +37,7 @@ Client:
 
 ```js
 var io = require('socket.io-client');
-var ss = require('socket.io-stream');
+var ss = require('@11ways/socket.io-stream');
 
 var socket = io.connect('http://example.com/user');
 var stream = ss.createStream();
